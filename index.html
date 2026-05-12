@@ -15,7 +15,6 @@ body{margin:0;font-family:'Poppins',sans-serif;background:#f8f6f6;color:#333}
 /* NAV */
 nav{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
 nav img{height:60px}
-nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:500}
 
 /* HERO */
 .hero{
@@ -27,8 +26,6 @@ padding:120px 20px;
 text-align:left
 }
 .hero h1{font-size:48px;margin-bottom:10px}
-.hero p{max-width:500px}
-.hero button{background:#9b1c1c;color:#fff;border:none;padding:12px 20px;margin-right:10px}
 
 /* SECTION */
 .section{padding:60px 20px;text-align:center}
@@ -37,9 +34,6 @@ text-align:left
 .grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
 .card{background:#fff;padding:25px;border-radius:12px;width:220px;box-shadow:0 6px 15px rgba(0,0,0,0.08)}
 
-/* SHOP */
-.product{background:#fff;padding:15px;border-radius:10px;width:180px}
-
 /* SPLIT */
 .split{display:flex;flex-wrap:wrap}
 .split div{flex:1;padding:40px}
@@ -47,11 +41,46 @@ text-align:left
 
 /* BOOKING */
 .booking{display:flex;flex-wrap:wrap;gap:20px}
-.form{flex:1;background:#fff;padding:25px;border-radius:10px}
-.packages{flex:1;display:flex;gap:10px}
-.pkg{background:#fff;padding:20px;border-radius:10px;flex:1;text-align:center}
 
-/* INPUT */
+/* PACKAGES */
+.pkg{
+background:#fff;
+padding:20px;
+border-radius:12px;
+flex:1;
+text-align:center;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+
+.pkg ul{
+list-style:none;
+padding:0;
+margin:15px 0;
+}
+
+.pkg li{
+margin:6px 0;
+font-size:14px;
+}
+
+.pkg button{
+background:#9b1c1c;
+color:#fff;
+border:none;
+padding:10px 15px;
+margin-top:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.pkg.popular{
+border:2px solid gold;
+transform:scale(1.05);
+}
+
+/* FORM */
+.form{flex:1;background:#fff;padding:25px;border-radius:10px}
+
 input,select,textarea{width:100%;padding:12px;margin:8px 0;border-radius:5px;border:1px solid #ccc}
 
 /* FOOTER */
@@ -67,22 +96,13 @@ Elegant Rentals. Flawless Events.
 </div>
 
 <nav>
-<img src="https://via.placeholder.com/150x60?text=Taffeta+Logo" alt="Taffeta Logo">
-
-<div>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">360 Booth</a>
-<a href="#">Shop</a>
-<a href="#">Contact</a>
-</div>
+<img src="https://via.placeholder.com/150x60?text=Taffeta+Logo" alt="Logo">
 </nav>
 
 <section class="hero">
 <h1>Elegant Events,<br>Perfectly Styled</h1>
-<p>From décor to unforgettable 360 experiences, we bring your vision to life.</p>
+<p>Luxury rentals & unforgettable 360 experiences</p>
 <button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
-<button>Shop Collection</button>
 </section>
 
 <section class="section">
@@ -95,20 +115,10 @@ Elegant Rentals. Flawless Events.
 </div>
 </section>
 
-<section class="section">
-<h2>Branded Essentials & More</h2>
-<div class="grid">
-<div class="product">T-Shirt</div>
-<div class="product">Tote Bag</div>
-<div class="product">Hoodie</div>
-<div class="product">Candle</div>
-</div>
-</section>
-
 <section class="split">
 <div style="background:#111;color:#fff">
-<h2>TER’s 360 Photo Booth</h2>
-<p>Capture every angle. Create unforgettable moments for weddings, parties, and events.</p>
+<h2>Taffeta’s 360 Photobooth</h2>
+<p>Capture every angle and create unforgettable memories for your special event.</p>
 </div>
 
 <div>
@@ -143,13 +153,51 @@ Elegant Rentals. Flawless Events.
 </form>
 </div>
 
-<div class="packages">
-<div class="pkg">Silver<br>$299 • 2 Hours</div>
-<div class="pkg">Gold<br>$449 • 3 Hours + Props</div>
-<div class="pkg">Platinum<br>$699 • Full Experience</div>
+<div class="pkg">
+<h3>Silver</h3>
+<p><strong>$299</strong></p>
+<ul>
+<li>2 Hours</li>
+<li>360 Booth Setup</li>
+<li>Basic Lighting</li>
+<li>Instant Sharing</li>
+</ul>
+<button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
+</div>
+
+<div class="pkg popular">
+<h3>Gold ⭐</h3>
+<p><strong>$449</strong></p>
+<ul>
+<li>3 Hours</li>
+<li>Custom Props</li>
+<li>LED Lighting</li>
+<li>Instant Sharing</li>
+<li>On-site Attendant</li>
+</ul>
+<button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
+</div>
+
+<div class="pkg">
+<h3>Platinum</h3>
+<p><strong>$699</strong></p>
+<ul>
+<li>4 Hours</li>
+<li>Premium Props</li>
+<li>Custom Overlay</li>
+<li>Red Carpet Setup</li>
+<li>VIP Experience</li>
+<li>On-site Attendant</li>
+</ul>
+<button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
 </div>
 
 </div>
+
+<p style="margin-top:20px; font-size:16px;">
+💫 Ask about our <strong>"Pay Your Way to Your Big Day!"</strong> installment plan  
+and our <strong>Fundraising Program</strong> to make your event even more affordable!
+</p>
 
 </section>
 
@@ -159,4 +207,3 @@ Elegant Rentals. Flawless Events.
 
 </body>
 </html>
-
