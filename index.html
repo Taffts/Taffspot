@@ -4,71 +4,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FONTS -->
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <title>Taffeta Event Rentals</title>
 
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#f8f6f6;color:#333}
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f8f6f6;
+color:#333;
+}
 
 /* TOP BAR */
-.topbar{background:#9b1c1c;color:#fff;padding:8px;text-align:center;font-size:14px}
+.topbar{
+background:#9b1c1c;
+color:#fff;
+padding:8px;
+text-align:center;
+font-size:14px;
+}
 
-
+/* NAV */
+nav{
+display:flex;
+align-items:center;
+padding:15px 30px;
+background:#fff;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+nav img{height:55px;margin-right:10px}
+nav h2{
+margin:0;
+color:#9b1c1c;
+font-family:'Playfair Display',serif;
+}
 
 /* HERO */
 .hero{
 background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622');
+url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1600');
 background-size:cover;
 background-position:center;
 color:#fff;
 padding:120px 20px;
 }
-.hero h1{font-size:48px;margin-bottom:10px}
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:42px;
+}
+.hero button{
+background:#9b1c1c;
+color:#fff;
+border:none;
+padding:12px 20px;
+border-radius:5px;
+margin-top:10px;
+}
 
 /* SECTION */
 .section{padding:60px 20px;text-align:center}
 
 /* GRID */
-.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
-.card{background:#fff;padding:25px;border-radius:12px;width:220px;box-shadow:0 6px 15px rgba(0,0,0,0.08)}
+.grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.card{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+width:200px;
+}
 
 /* SPLIT */
 .split{display:flex;flex-wrap:wrap}
-.split div{flex:1;padding:40px}
+.split div{flex:1;padding:30px}
 .split img{width:100%;border-radius:10px}
 
-/* BOOKING */
-.booking{display:flex;flex-wrap:wrap;gap:20px}
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px;
+}
+.gallery img{
+width:100%;
+border-radius:10px;
+}
 
 /* PACKAGES */
+.booking{display:flex;flex-wrap:wrap;gap:20px}
+
 .pkg{
 background:#fff;
 padding:20px;
 border-radius:12px;
 flex:1;
-text-align:center;
 box-shadow:0 6px 15px rgba(0,0,0,0.08);
 }
 
-.pkg ul{
-list-style:none;
-padding:0;
-margin:15px 0;
-}
-
-.pkg li{
-margin:6px 0;
-font-size:14px;
-}
+.pkg ul{list-style:none;padding:0}
+.pkg li{margin:6px 0}
 
 .pkg button{
 background:#9b1c1c;
 color:#fff;
 border:none;
-padding:10px 15px;
+padding:10px;
 margin-top:10px;
 border-radius:5px;
-cursor:pointer;
 }
 
 .pkg.popular{
@@ -77,28 +123,41 @@ transform:scale(1.05);
 }
 
 /* FORM */
-.form{flex:1;background:#fff;padding:25px;border-radius:10px}
+.form{flex:1;background:#fff;padding:20px;border-radius:10px}
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
 
-input,select,textarea{width:100%;padding:12px;margin:8px 0;border-radius:5px;border:1px solid #ccc}
+/* INSTAGRAM */
+.insta{
+background:#111;
+color:#fff;
+padding:40px 20px;
+text-align:center;
+}
 
 /* FOOTER */
-footer{background:#9b1c1c;color:#fff;padding:20px;text-align:center}
+footer{
+background:#9b1c1c;
+color:#fff;
+text-align:center;
+padding:20px;
+}
 </style>
 
 </head>
 
 <body>
 
-<div class="topbar">
-Elegant Rentals. Flawless Events.
-</div>
+<div class="topbar">Elegant Rentals. Flawless Events.</div>
 
 <nav>
-<nav style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<div style="display:flex;align-items:center;gap:10px;">
-<img src="https://i.postimg.cc/fTmhwnGL/Logo1.png" alt="Taffeta Logo" style="height:60px;">
-<h2 style="margin:0;color:#9b1c1c;">Taffeta Event Rentals</h2>
-</div>
+<img src="https://i.postimg.cc/fTmhwnGL/Logo1.png">
+<h2>Taffeta Event Rentals</h2>
 </nav>
 
 <section class="hero">
@@ -120,11 +179,20 @@ Elegant Rentals. Flawless Events.
 <section class="split">
 <div style="background:#111;color:#fff">
 <h2>Taffeta’s 360 Photobooth</h2>
-<p>Capture every angle and create unforgettable memories for your special event.</p>
+<p>Capture every angle and create unforgettable memories.</p>
 </div>
-
 <div>
-<img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800" style="width:100%; border-radius:10px;">
+<img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800">
+</div>
+</section>
+
+<section class="section">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=500">
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500">
+<img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=500">
 </div>
 </section>
 
@@ -135,7 +203,6 @@ Elegant Rentals. Flawless Events.
 
 <div class="form">
 <form action="https://formspree.io/f/mvzlwpaw" method="POST">
-
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email" required>
 <input type="date" name="date" required>
@@ -148,8 +215,6 @@ Elegant Rentals. Flawless Events.
 
 <textarea name="message" placeholder="Event details"></textarea>
 
-<input type="hidden" name="_subject" value="New Booking!">
-
 <button type="submit">Check Availability</button>
 
 </form>
@@ -157,50 +222,49 @@ Elegant Rentals. Flawless Events.
 
 <div class="pkg">
 <h3>Silver</h3>
-<p><strong>$299</strong></p>
+<p>$299</p>
 <ul>
 <li>2 Hours</li>
-<li>360 Booth Setup</li>
+<li>360 Booth</li>
 <li>Basic Lighting</li>
-<li>Instant Sharing</li>
 </ul>
-<button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
+<button>Book</button>
 </div>
 
 <div class="pkg popular">
 <h3>Gold ⭐</h3>
-<p><strong>$449</strong></p>
+<p>$449</p>
 <ul>
 <li>3 Hours</li>
-<li>Custom Props</li>
-<li>LED Lighting</li>
+<li>Props + Lighting</li>
 <li>Instant Sharing</li>
-<li>On-site Attendant</li>
 </ul>
-<button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
+<button>Book</button>
 </div>
 
 <div class="pkg">
 <h3>Platinum</h3>
-<p><strong>$699</strong></p>
+<p>$699</p>
 <ul>
 <li>4 Hours</li>
-<li>Premium Props</li>
+<li>VIP Setup</li>
 <li>Custom Overlay</li>
-<li>Red Carpet Setup</li>
-<li>VIP Experience</li>
-<li>On-site Attendant</li>
 </ul>
-<button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
+<button>Book</button>
 </div>
 
 </div>
 
-<p style="margin-top:20px; font-size:16px;">
-💫 Ask about our <strong>"Pay Your Way to Your Big Day!"</strong> installment plan  
-and our <strong>Fundraising Program</strong> to make your event even more affordable!
+<p style="margin-top:20px;">
+💫 Ask about our <strong>"Pay Your Way to Your Big Day!"</strong> installment plan and our <strong>Fundraising Program</strong>
 </p>
 
+</section>
+
+<section class="insta">
+<h2>Follow Our Journey</h2>
+<p>See real events and behind-the-scenes moments</p>
+<button onclick="window.location.href='#'">Follow on Instagram</button>
 </section>
 
 <footer>
