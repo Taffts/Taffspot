@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    
-    <meta charset="UTF-8">
-    <title>CodePen - A Pen by Tara Smith</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -19,49 +7,123 @@
 <title>Taffeta Event Rentals</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f8f6f6;color:#333}
-.topbar{background:#9b1c1c;color:#fff;padding:8px;text-align:center}
-nav{display:flex;justify-content:space-between;padding:15px;background:#fff}
-.hero{background:#9b1c1c;color:#fff;padding:80px;text-align:center}
-.section{padding:40px;text-align:center}
-.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:15px}
-.card{background:#fff;padding:20px;border-radius:10px}
-footer{background:#9b1c1c;color:#fff;text-align:center;padding:20px}
-input,select,textarea{width:100%;padding:10px;margin:5px 0}
-button{background:#9b1c1c;color:#fff;padding:10px;border:none}
+body{margin:0;font-family:'Poppins',sans-serif;background:#f8f6f6;color:#333}
+
+/* TOP BAR */
+.topbar{background:#9b1c1c;color:#fff;padding:8px;text-align:center;font-size:14px}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
+nav img{height:60px}
+nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:500}
+
+/* HERO */
+.hero{
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622');
+background-size:cover;
+color:#fff;
+padding:120px 20px;
+text-align:left
+}
+.hero h1{font-size:48px;margin-bottom:10px}
+.hero p{max-width:500px}
+.hero button{background:#9b1c1c;color:#fff;border:none;padding:12px 20px;margin-right:10px}
+
+/* SECTION */
+.section{padding:60px 20px;text-align:center}
+
+/* GRID */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.card{background:#fff;padding:25px;border-radius:12px;width:220px;box-shadow:0 6px 15px rgba(0,0,0,0.08)}
+
+/* SHOP */
+.product{background:#fff;padding:15px;border-radius:10px;width:180px}
+
+/* SPLIT */
+.split{display:flex;flex-wrap:wrap}
+.split div{flex:1;padding:40px}
+.split img{width:100%;border-radius:10px}
+
+/* BOOKING */
+.booking{display:flex;flex-wrap:wrap;gap:20px}
+.form{flex:1;background:#fff;padding:25px;border-radius:10px}
+.packages{flex:1;display:flex;gap:10px}
+.pkg{background:#fff;padding:20px;border-radius:10px;flex:1;text-align:center}
+
+/* INPUT */
+input,select,textarea{width:100%;padding:12px;margin:8px 0;border-radius:5px;border:1px solid #ccc}
+
+/* FOOTER */
+footer{background:#9b1c1c;color:#fff;padding:20px;text-align:center}
 </style>
 
 </head>
 
 <body>
 
-<div class="topbar">Taffeta Event Rentals</div>
+<div class="topbar">
+Elegant Rentals. Flawless Events.
+</div>
 
 <nav>
-<h2>TER</h2>
+<img src="https://via.placeholder.com/150x60?text=Taffeta+Logo" alt="Taffeta Logo">
+
 <div>
-Home | Services | 360 Booth | Shop
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">360 Booth</a>
+<a href="#">Shop</a>
+<a href="#">Contact</a>
 </div>
 </nav>
 
 <section class="hero">
-<h1>Elegant Events & 360 Experiences</h1>
-<p>Book your unforgettable moment today</p>
+<h1>Elegant Events,<br>Perfectly Styled</h1>
+<p>From décor to unforgettable 360 experiences, we bring your vision to life.</p>
+<button onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
+<button>Shop Collection</button>
 </section>
 
 <section class="section">
-<h2>360 Photo Booth Packages</h2>
+<h2>Everything You Need for a Stunning Event</h2>
 <div class="grid">
-<div class="card">Silver - $299</div>
-<div class="card">Gold - $449</div>
-<div class="card">Platinum - $699</div>
+<div class="card">Table & Chair Rentals</div>
+<div class="card">Linens & Textiles</div>
+<div class="card">Décor & Accents</div>
+<div class="card">Event Styling</div>
 </div>
 </section>
 
 <section class="section">
-<h2>Book Now</h2>
+<h2>Branded Essentials & More</h2>
+<div class="grid">
+<div class="product">T-Shirt</div>
+<div class="product">Tote Bag</div>
+<div class="product">Hoodie</div>
+<div class="product">Candle</div>
+</div>
+</section>
 
+<section class="split">
+<div style="background:#111;color:#fff">
+<h2>TER’s 360 Photo Booth</h2>
+<p>Capture every angle. Create unforgettable moments for weddings, parties, and events.</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1598514982415-ef8e0d8c2e7b">
+</div>
+</section>
+
+<section id="booking" class="section">
+<h2>Book Your 360 Experience</h2>
+
+<div class="booking">
+
+<div class="form">
 <form action="https://formspree.io/f/mvzlwpaw" method="POST">
+
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email" required>
 <input type="date" name="date" required>
@@ -74,19 +136,27 @@ Home | Services | 360 Booth | Shop
 
 <textarea name="message" placeholder="Event details"></textarea>
 
-<button type="submit">Request Booking</button>
+<input type="hidden" name="_subject" value="New Booking!">
+
+<button type="submit">Check Availability</button>
 
 </form>
+</div>
+
+<div class="packages">
+<div class="pkg">Silver<br>$299 • 2 Hours</div>
+<div class="pkg">Gold<br>$449 • 3 Hours + Props</div>
+<div class="pkg">Platinum<br>$699 • Full Experience</div>
+</div>
+
+</div>
 
 </section>
 
 <footer>
-© 2026 Taffeta Event Rentals
+<p>© 2026 Taffeta Event Rentals</p>
 </footer>
 
 </body>
 </html>
-    
-  </body>
-  
-</html>
+
